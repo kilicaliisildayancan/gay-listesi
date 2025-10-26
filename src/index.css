@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Retro Windows NT color palette */
+    --background: 180 100% 25.1%; /* Classic teal #008080 */
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 75.3%; /* Gray window #c0c0c0 */
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 75.3%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 210 100% 50%; /* Windows blue title bar */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 75.3%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 50.2%; /* Dark gray #808080 */
+    --muted-foreground: 0 0% 100%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 100%;
+    --ring: 210 100% 50%;
+
+    --radius: 0;
+
+    /* Window chrome colors */
+    --window-light: 0 0% 100%; /* White highlight */
+    --window-dark: 0 0% 50.2%; /* Dark shadow */
+    --window-darkest: 0 0% 25.1%; /* Darkest shadow */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-retro;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+@layer utilities {
+  /* Windows 95/NT 3D border effects */
+  .win95-outset {
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: hsl(var(--window-light));
+    border-left-color: hsl(var(--window-light));
+    border-right-color: hsl(var(--window-darkest));
+    border-bottom-color: hsl(var(--window-darkest));
+    box-shadow: 
+      inset 1px 1px 0 hsl(var(--window-light)),
+      inset -1px -1px 0 hsl(var(--window-dark));
+  }
+
+  .win95-inset {
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: hsl(var(--window-darkest));
+    border-left-color: hsl(var(--window-darkest));
+    border-right-color: hsl(var(--window-light));
+    border-bottom-color: hsl(var(--window-light));
+    box-shadow: 
+      inset 1px 1px 0 hsl(var(--window-dark)),
+      inset -1px -1px 0 hsl(var(--card));
+  }
+
+  .win95-window {
+    @apply win95-outset bg-card;
+  }
+
+  .win95-button {
+    @apply win95-outset bg-card px-4 py-2 text-foreground font-retro text-xs cursor-pointer;
+  }
+
+  .win95-button:active {
+    @apply win95-inset;
+  }
+
+  .win95-input {
+    @apply win95-inset bg-input px-2 py-1 text-foreground font-retro text-xs;
+  }
+
+  .win95-titlebar {
+    @apply bg-primary text-primary-foreground font-retro text-xs px-1 py-1 flex items-center justify-between;
+  }
+}

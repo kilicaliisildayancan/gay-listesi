@@ -1,1 +1,1 @@
-# gay-listesi
+GAY LISTESI
