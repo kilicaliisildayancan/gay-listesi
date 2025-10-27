@@ -59,7 +59,7 @@ export const SuggestionsList = () => {
   if (loading) {
     return (
       <div className="win95-inset bg-white p-4 text-center">
-        <span className="text-xs">Loading suggestions...</span>
+        <span className="text-xs">Öneriler yükleniyor...</span>
       </div>
     );
   }
@@ -67,7 +67,7 @@ export const SuggestionsList = () => {
   if (suggestions.length === 0) {
     return (
       <div className="win95-inset bg-white p-4 text-center">
-        <span className="text-xs">No suggestions yet. Be the first to submit one!</span>
+        <span className="text-xs">Hiç öneri olmaması biraz gay...</span>
       </div>
     );
   }

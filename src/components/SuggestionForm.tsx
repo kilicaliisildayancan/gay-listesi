@@ -33,12 +33,12 @@ export const SuggestionForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
       <div>
-        <label className="block text-xs mb-2 font-retro">Your suggestion:</label>
+        <label className="block text-xs mb-2 font-retro">Önerin:</label>
         <textarea
           value={suggestion}
           onChange={(e) => setSuggestion(e.target.value)}
           className="win95-input w-full min-h-[80px] resize-none"
-          placeholder="Type your suggestion here..."
+          placeholder="Gay olduğunu belli edebilecek item..."
         />
       </div>
       <button
@@ -46,7 +46,7 @@ export const SuggestionForm = () => {
         className="win95-button"
         disabled={submitting}
       >
-        {submitting ? "Submitting..." : "Submit"}
+        {submitting ? "Yollanıyor geliyor..." : "Yolla gelsin"}
       </button>
     </form>
   );

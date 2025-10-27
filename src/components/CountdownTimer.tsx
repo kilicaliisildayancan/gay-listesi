@@ -18,7 +18,7 @@ export const CountdownTimer = () => {
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      return `${String(days).padStart(2, "0")}d ${String(hours).padStart(2, "0")}h ${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
+      return `${String(days).padStart(2, "0")}g ${String(hours).padStart(2, "0")}s ${String(minutes).padStart(2, "0")}d ${String(seconds).padStart(2, "0")}s`;
     };
 
     setTimeLeft(calculateTimeLeft());
@@ -31,7 +31,7 @@ export const CountdownTimer = () => {
 
   return (
     <div className="win95-inset bg-input p-2 text-center">
-      <div className="text-xs mb-1">Time until list refresh:</div>
+      <div className="text-xs mb-1">Listeye yeni itemler gelmesine:</div>
       <div className="font-retro text-xs text-primary">{timeLeft}</div>
     </div>
   );
