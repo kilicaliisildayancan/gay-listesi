@@ -43,7 +43,7 @@ const Index = () => {
     "Acı yememek",
     "Sakalı 25 yaşında tamamlayamamış olmak",
     "Ateş/patlama sevmemek (bkz. patlayıcı silahlar, motor)",
-    "Lazer yaptırmak",
+    "Lazer yaptırmak, ekstra puan için bunun zamanlamasını askerden önceye ayarlamak",
     "Maniküre gitmek",
     "Göğüs kılı olmamak (soyboy)",
     "Fazla su (1L+/gün) içmek, ekstra puan için su içme uygulaması indirmiş olmak",
